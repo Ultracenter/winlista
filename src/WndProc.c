@@ -21,7 +21,6 @@ LRESULT CALLBACK  WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 				if (lParam==(LPARAM)hWndOk)
 				{
 					Grava(hWndlistbox);        	
-					//SendMessage(hWnd,WM_DESTROY,0,0);
 				}
 				if (lParam==(LPARAM)hWndlistbox)
 				{
