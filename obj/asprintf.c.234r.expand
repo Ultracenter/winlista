@@ -1,0 +1,496 @@
+
+;; Function _vscprintf_so (_vscprintf_so, funcdef_no=18, decl_uid=3875, cgraph_uid=18, symbol_order=18)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/v/f:DI 88 [ format ])
+        (reg:DI 2 cx [ format ])) "src/asprintf.c":6 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v/f:DI 89 [ pargs ])
+        (reg:DI 1 dx [ pargs ])) "src/asprintf.c":6 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:DI 38 r9)
+        (reg/v/f:DI 89 [ pargs ])) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 37 r8)
+        (reg/v/f:DI 88 [ format ])) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 1 dx)
+        (const_int 0 [0])) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 2 cx)
+        (const_int 0 [0])) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(call_insn/j 11 10 12 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__ms_vsnprintf") [flags 0x43] <function_decl 0x7f4a37d36d00 __ms_vsnprintf>) [0 __ms_vsnprintf S1 A8])
+            (const_int 32 [0x20]))) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__ms_vsnprintf") [flags 0x43] <function_decl 0x7f4a37d36d00 __ms_vsnprintf>)
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 37 r8))
+                (expr_list:DI (use (reg:DI 38 r9))
+                    (nil))))))
+(barrier 12 11 0)
+
+;; Function vasprintf (vasprintf, funcdef_no=19, decl_uid=3879, cgraph_uid=19, symbol_order=19)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 16 from 9 to 10.
+Redirecting jump 43 from 9 to 10.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+Removing jump 50.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg/v/f:DI 94 [ strp ])
+        (reg:DI 2 cx [ strp ])) "src/asprintf.c":16 -1
+     (expr_list:REG_EQUIV (mem/f/c:DI (reg/f:DI 81 virtual-incoming-args) [2 strp+0 S8 A64])
+        (nil)))
+(insn 3 2 4 2 (set (reg/v/f:DI 95 [ fmt ])
+        (reg:DI 1 dx [ fmt ])) "src/asprintf.c":16 -1
+     (expr_list:REG_EQUIV (mem/f/c:DI (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [1 fmt+0 S8 A64])
+        (nil)))
+(insn 4 3 5 2 (set (reg/v/f:DI 96 [ ap ])
+        (reg:DI 37 r8 [ ap ])) "src/asprintf.c":16 -1
+     (expr_list:REG_EQUIV (mem/f/c:DI (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [1 ap+0 S8 A64])
+        (nil)))
+(note 5 4 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 5 10 2 (set (reg:DI 1 dx)
+        (reg/v/f:DI 96 [ ap ])) "src/asprintf.c":17 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 2 cx)
+        (reg/v/f:DI 95 [ fmt ])) "src/asprintf.c":17 -1
+     (nil))
+(call_insn 11 10 12 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_vscprintf_so") [flags 0x3] <function_decl 0x7f4a379c0d00 _vscprintf_so>) [0 _vscprintf_so S1 A8])
+            (const_int 32 [0x20]))) "src/asprintf.c":17 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_vscprintf_so") [flags 0x3] <function_decl 0x7f4a379c0d00 _vscprintf_so>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (nil))))
+(insn 12 11 13 2 (set (reg/v:SI 91 [ len ])
+        (reg:SI 0 ax)) "src/asprintf.c":17 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 91 [ len ])
+            (const_int -1 [0xffffffffffffffff]))) "src/asprintf.c":18 -1
+     (nil))
+(jump_insn 14 13 26 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 18)
+            (pc))) "src/asprintf.c":18 -1
+     (int_list:REG_BR_PROB 1062038044 (nil))
+ -> 18)
+(code_label 26 14 15 4 6 (nil) [1 uses])
+(note 15 26 6 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 6 15 16 4 (set (reg:SI 93 [ <retval> ])
+        (const_int -1 [0xffffffffffffffff])) "src/asprintf.c":18 -1
+     (nil))
+(jump_insn 16 6 17 4 (set (pc)
+        (label_ref:DI 52)) 683 {jump}
+     (nil)
+ -> 52)
+(barrier 17 16 18)
+(code_label 18 17 19 5 4 (nil) [1 uses])
+(note 19 18 20 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 5 (set (reg:DI 97)
+        (sign_extend:DI (reg/v:SI 91 [ len ]))) "src/asprintf.c":19 -1
+     (nil))
+(insn 21 20 22 5 (parallel [
+            (set (reg:DI 98)
+                (plus:DI (reg:DI 97)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "src/asprintf.c":19 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:DI 2 cx)
+        (reg:DI 98)) "src/asprintf.c":19 -1
+     (nil))
+(call_insn 23 22 24 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x43] <function_decl 0x7f4a37c70f00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 32 [0x20]))) "src/asprintf.c":19 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("malloc") [flags 0x43] <function_decl 0x7f4a37c70f00 malloc>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 24 23 25 5 (set (reg/f:DI 99)
+        (reg:DI 0 ax)) "src/asprintf.c":19 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 99)
+        (nil)))
+(insn 25 24 27 5 (set (reg/v/f:DI 92 [ str ])
+        (reg/f:DI 99)) "src/asprintf.c":19 -1
+     (nil))
+(insn 27 25 28 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 92 [ str ])
+            (const_int 0 [0]))) "src/asprintf.c":20 -1
+     (nil))
+(jump_insn 28 27 29 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 26)
+            (pc))) "src/asprintf.c":20 -1
+     (int_list:REG_BR_PROB 9771052 (nil))
+ -> 26)
+(note 29 28 30 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 31 6 (parallel [
+            (set (reg:SI 100)
+                (plus:SI (reg/v:SI 91 [ len ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "src/asprintf.c":21 -1
+     (nil))
+(insn 31 30 32 6 (set (reg:DI 101)
+        (sign_extend:DI (reg:SI 100))) "src/asprintf.c":21 -1
+     (nil))
+(insn 32 31 33 6 (set (reg:DI 38 r9)
+        (reg/v/f:DI 96 [ ap ])) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(insn 33 32 34 6 (set (reg:DI 37 r8)
+        (reg/v/f:DI 95 [ fmt ])) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(insn 34 33 35 6 (set (reg:DI 1 dx)
+        (reg:DI 101)) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(insn 35 34 36 6 (set (reg:DI 2 cx)
+        (reg/v/f:DI 92 [ str ])) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(call_insn 36 35 37 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__ms_vsnprintf") [flags 0x43] <function_decl 0x7f4a37d36d00 __ms_vsnprintf>) [0 __ms_vsnprintf S1 A8])
+            (const_int 32 [0x20]))) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__ms_vsnprintf") [flags 0x43] <function_decl 0x7f4a37d36d00 __ms_vsnprintf>)
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 37 r8))
+                (expr_list:DI (use (reg:DI 38 r9))
+                    (nil))))))
+(insn 37 36 38 6 (set (reg:SI 93 [ <retval> ])
+        (reg:SI 0 ax)) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(insn 38 37 39 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 93 [ <retval> ])
+            (const_int -1 [0xffffffffffffffff]))) "src/asprintf.c":22 -1
+     (nil))
+(jump_insn 39 38 40 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 45)
+            (pc))) "src/asprintf.c":22 -1
+     (int_list:REG_BR_PROB 1070842724 (nil))
+ -> 45)
+(note 40 39 41 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 42 7 (set (reg:DI 2 cx)
+        (reg/v/f:DI 92 [ str ])) "src/asprintf.c":22 -1
+     (nil))
+(call_insn 42 41 43 7 (call (mem:QI (symbol_ref:DI ("free") [flags 0x43] <function_decl 0x7f4a37c6c500 free>) [0 __builtin_free S1 A8])
+        (const_int 32 [0x20])) "src/asprintf.c":22 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x43] <function_decl 0x7f4a37c6c500 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(jump_insn 43 42 44 7 (set (pc)
+        (label_ref:DI 52)) "src/asprintf.c":22 683 {jump}
+     (nil)
+ -> 52)
+(barrier 44 43 45)
+(code_label 45 44 46 8 7 (nil) [1 uses])
+(note 46 45 47 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 47 46 52 8 (set (mem/f:DI (reg/v/f:DI 94 [ strp ]) [1 *strp_15(D)+0 S8 A64])
+        (reg/v/f:DI 92 [ str ])) "src/asprintf.c":23 -1
+     (nil))
+(code_label 52 47 55 10 3 (nil) [2 uses])
+(note 55 52 53 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 53 55 54 10 (set (reg/i:SI 0 ax)
+        (reg:SI 93 [ <retval> ])) "src/asprintf.c":24 -1
+     (nil))
+(insn 54 53 0 10 (use (reg/i:SI 0 ax)) "src/asprintf.c":24 -1
+     (nil))
+
+;; Function asprintf (asprintf, funcdef_no=20, decl_uid=3882, cgraph_uid=20, symbol_order=20)
+
+Partition 0: size 8 align 8
+	ap
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Redirecting jump 20 from 9 to 10.
+Redirecting jump 47 from 9 to 10.
+Merging block 9 into block 8...
+Merged blocks 8 and 9.
+Merged 8 and 9 without moving.
+Removing jump 54.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 8 NOTE_INSN_DELETED)
+(note 8 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 8 3 2 (set (reg/v/f:DI 95 [ strp ])
+        (reg:DI 2 cx [ strp ])) "src/asprintf.c":28 -1
+     (expr_list:REG_EQUIV (mem/f/c:DI (reg/f:DI 81 virtual-incoming-args) [2 strp+0 S8 A64])
+        (nil)))
+(insn 3 2 4 2 (set (reg/v/f:DI 96 [ fmt ])
+        (reg:DI 1 dx [ fmt ])) "src/asprintf.c":28 -1
+     (expr_list:REG_EQUIV (mem/f/c:DI (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [1 fmt+0 S8 A64])
+        (nil)))
+(insn 4 3 5 2 (set (mem/c:DI (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [0  S8 A8])
+        (reg:DI 37 r8)) "src/asprintf.c":28 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:DI (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [0  S8 A8])
+        (reg:DI 38 r9)) "src/asprintf.c":28 -1
+     (nil))
+(note 6 5 10 2 NOTE_INSN_FUNCTION_BEG)
+(insn 10 6 11 2 (parallel [
+            (set (reg:DI 97)
+                (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                    (const_int 16 [0x10])))
+            (clobber (reg:CC 17 flags))
+        ]) "src/asprintf.c":30 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 MEM[(char * *)&ap]+0 S8 A64])
+        (reg:DI 97)) "src/asprintf.c":30 -1
+     (nil))
+(insn 12 11 13 2 (set (reg/f:DI 87 [ ap.1_1 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 ap+0 S8 A64])) "src/asprintf.c":31 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 1 dx)
+        (reg/f:DI 87 [ ap.1_1 ])) "src/asprintf.c":17 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 2 cx)
+        (reg/v/f:DI 96 [ fmt ])) "src/asprintf.c":17 -1
+     (nil))
+(call_insn 15 14 16 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_vscprintf_so") [flags 0x3] <function_decl 0x7f4a379c0d00 _vscprintf_so>) [0 _vscprintf_so S1 A8])
+            (const_int 32 [0x20]))) "src/asprintf.c":17 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_vscprintf_so") [flags 0x3] <function_decl 0x7f4a379c0d00 _vscprintf_so>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (nil))))
+(insn 16 15 17 2 (set (reg/v:SI 88 [ len ])
+        (reg:SI 0 ax)) "src/asprintf.c":17 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 88 [ len ])
+            (const_int -1 [0xffffffffffffffff]))) "src/asprintf.c":18 -1
+     (nil))
+(jump_insn 18 17 30 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 22)
+            (pc))) "src/asprintf.c":18 -1
+     (int_list:REG_BR_PROB 1062038044 (nil))
+ -> 22)
+(code_label 30 18 19 4 15 (nil) [1 uses])
+(note 19 30 7 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 7 19 20 4 (set (reg:SI 94 [ <retval> ])
+        (const_int -1 [0xffffffffffffffff])) "src/asprintf.c":18 -1
+     (nil))
+(jump_insn 20 7 21 4 (set (pc)
+        (label_ref:DI 56)) "src/asprintf.c":18 683 {jump}
+     (nil)
+ -> 56)
+(barrier 21 20 22)
+(code_label 22 21 23 5 13 (nil) [1 uses])
+(note 23 22 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 5 (set (reg:DI 98)
+        (sign_extend:DI (reg/v:SI 88 [ len ]))) "src/asprintf.c":19 -1
+     (nil))
+(insn 25 24 26 5 (parallel [
+            (set (reg:DI 99)
+                (plus:DI (reg:DI 98)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "src/asprintf.c":19 -1
+     (nil))
+(insn 26 25 27 5 (set (reg:DI 2 cx)
+        (reg:DI 99)) "src/asprintf.c":19 -1
+     (nil))
+(call_insn 27 26 28 5 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x43] <function_decl 0x7f4a37c70f00 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 32 [0x20]))) "src/asprintf.c":19 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("malloc") [flags 0x43] <function_decl 0x7f4a37c70f00 malloc>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 28 27 29 5 (set (reg/f:DI 100)
+        (reg:DI 0 ax)) "src/asprintf.c":19 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 100)
+        (nil)))
+(insn 29 28 31 5 (set (reg/v/f:DI 91 [ str ])
+        (reg/f:DI 100)) "src/asprintf.c":19 -1
+     (nil))
+(insn 31 29 32 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 91 [ str ])
+            (const_int 0 [0]))) "src/asprintf.c":20 -1
+     (nil))
+(jump_insn 32 31 33 5 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 30)
+            (pc))) "src/asprintf.c":20 -1
+     (int_list:REG_BR_PROB 9771052 (nil))
+ -> 30)
+(note 33 32 34 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 35 6 (parallel [
+            (set (reg:SI 101)
+                (plus:SI (reg/v:SI 88 [ len ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "src/asprintf.c":21 -1
+     (nil))
+(insn 35 34 36 6 (set (reg:DI 102)
+        (sign_extend:DI (reg:SI 101))) "src/asprintf.c":21 -1
+     (nil))
+(insn 36 35 37 6 (set (reg:DI 38 r9)
+        (reg/f:DI 87 [ ap.1_1 ])) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(insn 37 36 38 6 (set (reg:DI 37 r8)
+        (reg/v/f:DI 96 [ fmt ])) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(insn 38 37 39 6 (set (reg:DI 1 dx)
+        (reg:DI 102)) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(insn 39 38 40 6 (set (reg:DI 2 cx)
+        (reg/v/f:DI 91 [ str ])) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(call_insn 40 39 41 6 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("__ms_vsnprintf") [flags 0x43] <function_decl 0x7f4a37d36d00 __ms_vsnprintf>) [0 __ms_vsnprintf S1 A8])
+            (const_int 32 [0x20]))) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__ms_vsnprintf") [flags 0x43] <function_decl 0x7f4a37d36d00 __ms_vsnprintf>)
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 37 r8))
+                (expr_list:DI (use (reg:DI 38 r9))
+                    (nil))))))
+(insn 41 40 42 6 (set (reg:SI 94 [ <retval> ])
+        (reg:SI 0 ax)) "/usr/share/mingw-w64/include/stdio.h":777 -1
+     (nil))
+(insn 42 41 43 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 94 [ <retval> ])
+            (const_int -1 [0xffffffffffffffff]))) "src/asprintf.c":22 -1
+     (nil))
+(jump_insn 43 42 44 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 49)
+            (pc))) "src/asprintf.c":22 -1
+     (int_list:REG_BR_PROB 1070842724 (nil))
+ -> 49)
+(note 44 43 45 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 45 44 46 7 (set (reg:DI 2 cx)
+        (reg/v/f:DI 91 [ str ])) "src/asprintf.c":22 -1
+     (nil))
+(call_insn 46 45 47 7 (call (mem:QI (symbol_ref:DI ("free") [flags 0x43] <function_decl 0x7f4a37c6c500 free>) [0 __builtin_free S1 A8])
+        (const_int 32 [0x20])) "src/asprintf.c":22 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("free") [flags 0x43] <function_decl 0x7f4a37c6c500 free>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(jump_insn 47 46 48 7 (set (pc)
+        (label_ref:DI 56)) "src/asprintf.c":22 683 {jump}
+     (nil)
+ -> 56)
+(barrier 48 47 49)
+(code_label 49 48 50 8 16 (nil) [1 uses])
+(note 50 49 51 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 56 8 (set (mem/f:DI (reg/v/f:DI 95 [ strp ]) [1 *strp_4(D)+0 S8 A64])
+        (reg/v/f:DI 91 [ str ])) "src/asprintf.c":23 -1
+     (nil))
+(code_label 56 51 59 10 12 (nil) [2 uses])
+(note 59 56 57 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 57 59 58 10 (set (reg/i:SI 0 ax)
+        (reg:SI 94 [ <retval> ])) "src/asprintf.c":33 -1
+     (nil))
+(insn 58 57 0 10 (use (reg/i:SI 0 ax)) "src/asprintf.c":33 -1
+     (nil))

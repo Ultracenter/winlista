@@ -1,0 +1,378 @@
+
+;; Function WinMain (WinMain, funcdef_no=5562, decl_uid=40320, cgraph_uid=5562, symbol_order=5562)
+
+Partition 1: size 72 align 16
+	wc
+Partition 2: size 48 align 16
+	msg
+Partition 0: size 7 align 1
+	CLASS_NAME
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Forwarding edge 7->8 to 4 failed.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 7->8 to 4 failed.
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (reg/v/f:DI 90 [ hInstance ])
+        (reg:DI 2 cx [ hInstance ])) "src/WinMain.c":4 -1
+     (expr_list:REG_EQUIV (mem/f/c:DI (reg/f:DI 81 virtual-incoming-args) [4 hInstance+0 S8 A64])
+        (nil)))
+(insn 3 2 4 2 (set (reg/v/f:DI 91 [ hPrevInstance ])
+        (reg:DI 1 dx [ hPrevInstance ])) "src/WinMain.c":4 -1
+     (expr_list:REG_EQUIV (mem/f/c:DI (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                (const_int 8 [0x8])) [4 hPrevInstance+0 S8 A64])
+        (nil)))
+(insn 4 3 5 2 (set (reg/v/f:DI 92 [ pCmdLine ])
+        (reg:DI 37 r8 [ pCmdLine ])) "src/WinMain.c":4 -1
+     (expr_list:REG_EQUIV (mem/f/c:DI (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                (const_int 16 [0x10])) [7 pCmdLine+0 S8 A64])
+        (nil)))
+(insn 5 4 6 2 (set (reg/v:SI 93 [ nCmdShow ])
+        (reg:SI 38 r9 [ nCmdShow ])) "src/WinMain.c":4 -1
+     (expr_list:REG_EQUIV (mem/c:SI (plus:DI (reg/f:DI 81 virtual-incoming-args)
+                (const_int 24 [0x18])) [2 nCmdShow+0 S4 A64])
+        (nil)))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -135 [0xffffffffffffff79])) [0 CLASS_NAME+0 S4 A8])
+        (const_int 1852139361 [0x6e656761])) "src/WinMain.c":6 -1
+     (nil))
+(insn 10 9 11 2 (set (mem/c:HI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -131 [0xffffffffffffff7d])) [0 CLASS_NAME+4 S2 A8])
+        (const_int 24932 [0x6164])) "src/WinMain.c":6 -1
+     (nil))
+(insn 11 10 12 2 (set (mem/c:QI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -129 [0xffffffffffffff7f])) [0 CLASS_NAME+6 S1 A8])
+        (const_int 0 [0])) "src/WinMain.c":6 -1
+     (nil))
+(insn 12 11 13 2 (set (mem/c:TI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -80 [0xffffffffffffffb0])) [1 MEM[(struct tagWNDCLASSA *)&wc]+0 S16 A128])
+        (const_int 0 [0])) "src/WinMain.c":8 -1
+     (nil))
+(insn 13 12 14 2 (set (mem/c:TI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -64 [0xffffffffffffffc0])) [1 MEM[(struct tagWNDCLASSA *)&wc]+16 S16 A128])
+        (const_int 0 [0])) "src/WinMain.c":8 -1
+     (nil))
+(insn 14 13 15 2 (set (mem/c:TI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [1 MEM[(struct tagWNDCLASSA *)&wc]+32 S16 A128])
+        (const_int 0 [0])) "src/WinMain.c":8 -1
+     (nil))
+(insn 15 14 16 2 (set (mem/c:TI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [1 MEM[(struct tagWNDCLASSA *)&wc]+48 S16 A128])
+        (const_int 0 [0])) "src/WinMain.c":8 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 94)
+        (mem/u/c:DI (symbol_ref:DI ("*.refptr.WndProc") [flags 0x2042] <var_decl 0x7f7c10bb4b40 D.91589>) [13  S8 A8])) "src/WinMain.c":10 -1
+     (nil))
+(insn 17 16 18 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -72 [0xffffffffffffffb8])) [3 wc.lpfnWndProc+0 S8 A64])
+        (reg:DI 94)) "src/WinMain.c":10 -1
+     (nil))
+(insn 18 17 19 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -56 [0xffffffffffffffc8])) [4 wc.hInstance+0 S8 A64])
+        (reg/v/f:DI 90 [ hInstance ])) "src/WinMain.c":11 -1
+     (nil))
+(insn 19 18 20 2 (parallel [
+            (set (reg:DI 95)
+                (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -135 [0xffffffffffffff79])))
+            (clobber (reg:CC 17 flags))
+        ]) "src/WinMain.c":12 -1
+     (nil))
+(insn 20 19 21 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [7 wc.lpszClassName+0 S8 A128])
+        (reg:DI 95)) "src/WinMain.c":12 -1
+     (nil))
+(insn 21 20 22 2 (parallel [
+            (set (reg:DI 96)
+                (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "src/WinMain.c":14 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:DI 2 cx)
+        (reg:DI 96)) "src/WinMain.c":14 -1
+     (nil))
+(insn 23 22 24 2 (set (reg:DI 97)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp_RegisterClassA") [flags 0x2002] <var_decl 0x7f7c10bb4bd0 D.91590>) [13  S8 A8])) "src/WinMain.c":14 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("RegisterClassA") [flags 0x441] <function_decl 0x7f7c12deb200 RegisterClassA>)
+        (nil)))
+(call_insn 24 23 25 2 (set (reg:HI 0 ax)
+        (call (mem:QI (reg:DI 97) [0 RegisterClassA S1 A8])
+            (const_int 32 [0x20]))) "src/WinMain.c":14 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("RegisterClassA") [flags 0x441] <function_decl 0x7f7c12deb200 RegisterClassA>)
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 25 24 26 2 (parallel [
+            (set (reg:DI 98)
+                (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -135 [0xffffffffffffff79])))
+            (clobber (reg:CC 17 flags))
+        ]) "src/WinMain.c":18 -1
+     (nil))
+(insn 26 25 27 2 (set (mem:DI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                (const_int 88 [0x58])) [0  S8 A64])
+        (const_int 0 [0])) "src/WinMain.c":18 -1
+     (nil))
+(insn 27 26 28 2 (set (mem:DI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                (const_int 80 [0x50])) [0  S8 A64])
+        (reg/v/f:DI 90 [ hInstance ])) "src/WinMain.c":18 -1
+     (nil))
+(insn 28 27 29 2 (set (mem:DI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                (const_int 72 [0x48])) [0  S8 A64])
+        (const_int 0 [0])) "src/WinMain.c":18 -1
+     (nil))
+(insn 29 28 30 2 (set (mem:DI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                (const_int 64 [0x40])) [0  S8 A64])
+        (const_int 0 [0])) "src/WinMain.c":18 -1
+     (nil))
+(insn 30 29 31 2 (set (mem:SI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                (const_int 56 [0x38])) [0  S4 A64])
+        (const_int -2147483648 [0xffffffff80000000])) "src/WinMain.c":18 -1
+     (nil))
+(insn 31 30 32 2 (set (mem:SI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                (const_int 48 [0x30])) [0  S4 A64])
+        (const_int -2147483648 [0xffffffff80000000])) "src/WinMain.c":18 -1
+     (nil))
+(insn 32 31 33 2 (set (mem:SI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                (const_int 40 [0x28])) [0  S4 A64])
+        (const_int -2147483648 [0xffffffff80000000])) "src/WinMain.c":18 -1
+     (nil))
+(insn 33 32 34 2 (set (mem:SI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                (const_int 32 [0x20])) [0  S4 A64])
+        (const_int -2147483648 [0xffffffff80000000])) "src/WinMain.c":18 -1
+     (nil))
+(insn 34 33 35 2 (set (reg:SI 38 r9)
+        (const_int 13565952 [0xcf0000])) "src/WinMain.c":18 -1
+     (nil))
+(insn 35 34 36 2 (set (reg:DI 37 r8)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2] <var_decl 0x7f7c10bb4cf0 *.LC0>)) "src/WinMain.c":18 -1
+     (nil))
+(insn 36 35 37 2 (set (reg:DI 1 dx)
+        (reg:DI 98)) "src/WinMain.c":18 -1
+     (nil))
+(insn 37 36 38 2 (set (reg:SI 2 cx)
+        (const_int 0 [0])) "src/WinMain.c":18 -1
+     (nil))
+(insn 38 37 39 2 (set (reg:DI 99)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp_CreateWindowExA") [flags 0x2002] <var_decl 0x7f7c10bb4d80 D.91592>) [13  S8 A8])) "src/WinMain.c":18 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("CreateWindowExA") [flags 0x441] <function_decl 0x7f7c12df4100 CreateWindowExA>)
+        (nil)))
+(call_insn 39 38 40 2 (set (reg:DI 0 ax)
+        (call (mem:QI (reg:DI 99) [0 CreateWindowExA S1 A8])
+            (const_int 96 [0x60]))) "src/WinMain.c":18 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("CreateWindowExA") [flags 0x441] <function_decl 0x7f7c12df4100 CreateWindowExA>)
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:DI (use (reg:DI 37 r8))
+                (expr_list:SI (use (reg:SI 38 r9))
+                    (expr_list:SI (use (mem:SI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                                    (const_int 32 [0x20])) [0  S4 A64]))
+                        (expr_list:SI (use (mem:SI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                                        (const_int 40 [0x28])) [0  S4 A64]))
+                            (expr_list:SI (use (mem:SI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                                            (const_int 48 [0x30])) [0  S4 A64]))
+                                (expr_list:SI (use (mem:SI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                                                (const_int 56 [0x38])) [0  S4 A64]))
+                                    (expr_list:DI (use (mem/f:DI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                                                    (const_int 64 [0x40])) [0  S8 A64]))
+                                        (expr_list:DI (use (mem/f:DI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                                                        (const_int 72 [0x48])) [0  S8 A64]))
+                                            (expr_list:DI (use (mem/f:DI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                                                            (const_int 80 [0x50])) [0  S8 A64]))
+                                                (expr_list:DI (use (mem/f:DI (plus:DI (reg/f:DI 84 virtual-outgoing-args)
+                                                                (const_int 88 [0x58])) [0  S8 A64]))
+                                                    (nil))))))))))))))
+(insn 40 39 41 2 (set (reg/v/f:DI 88 [ hwnd ])
+        (reg:DI 0 ax)) "src/WinMain.c":18 -1
+     (nil))
+(insn 41 40 42 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v/f:DI 88 [ hwnd ])
+            (const_int 0 [0]))) "src/WinMain.c":33 -1
+     (nil))
+(jump_insn 42 41 80 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 47)
+            (pc))) "src/WinMain.c":33 -1
+     (int_list:REG_BR_PROB 741418732 (nil))
+ -> 47)
+(code_label 80 42 43 4 5 (nil) [1 uses])
+(note 43 80 44 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 44 43 45 4 (set (reg:SI 89 [ <retval> ])
+        (const_int 0 [0])) -1
+     (nil))
+(jump_insn 45 44 46 4 (set (pc)
+        (label_ref 84)) -1
+     (nil)
+ -> 84)
+(barrier 46 45 47)
+(code_label 47 46 48 5 2 (nil) [1 uses])
+(note 48 47 49 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 49 48 50 5 (set (reg:SI 1 dx)
+        (reg/v:SI 93 [ nCmdShow ])) "src/WinMain.c":38 -1
+     (nil))
+(insn 50 49 51 5 (set (reg:DI 2 cx)
+        (reg/v/f:DI 88 [ hwnd ])) "src/WinMain.c":38 -1
+     (nil))
+(insn 51 50 52 5 (set (reg:DI 101)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp_ShowWindow") [flags 0x2002] <var_decl 0x7f7c10bb4e10 D.91593>) [13  S8 A8])) "src/WinMain.c":38 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("ShowWindow") [flags 0x441] <function_decl 0x7f7c12df4700 ShowWindow>)
+        (nil)))
+(call_insn 52 51 53 5 (set (reg:SI 0 ax)
+        (call (mem:QI (reg:DI 101) [0 ShowWindow S1 A8])
+            (const_int 32 [0x20]))) "src/WinMain.c":38 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("ShowWindow") [flags 0x441] <function_decl 0x7f7c12df4700 ShowWindow>)
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:SI (use (reg:SI 1 dx))
+            (nil))))
+(insn 53 52 54 5 (set (mem/c:TI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -128 [0xffffffffffffff80])) [8 msg+0 S16 A128])
+        (const_int 0 [0])) "src/WinMain.c":42 -1
+     (nil))
+(insn 54 53 55 5 (set (mem/c:TI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -112 [0xffffffffffffff90])) [8 msg+16 S16 A128])
+        (const_int 0 [0])) "src/WinMain.c":42 -1
+     (nil))
+(insn 55 54 56 5 (set (mem/c:TI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -96 [0xffffffffffffffa0])) [8 msg+32 S16 A128])
+        (const_int 0 [0])) "src/WinMain.c":42 -1
+     (nil))
+(jump_insn 56 55 57 5 (set (pc)
+        (label_ref 67)) "src/WinMain.c":43 -1
+     (nil)
+ -> 67)
+(barrier 57 56 77)
+(code_label 77 57 58 6 4 (nil) [1 uses])
+(note 58 77 59 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 60 6 (parallel [
+            (set (reg:DI 102)
+                (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -128 [0xffffffffffffff80])))
+            (clobber (reg:CC 17 flags))
+        ]) "src/WinMain.c":45 -1
+     (nil))
+(insn 60 59 61 6 (set (reg:DI 2 cx)
+        (reg:DI 102)) "src/WinMain.c":45 -1
+     (nil))
+(insn 61 60 62 6 (set (reg:DI 103)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp_TranslateMessage") [flags 0x2002] <var_decl 0x7f7c10bb4ea0 D.91594>) [13  S8 A8])) "src/WinMain.c":45 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("TranslateMessage") [flags 0x441] <function_decl 0x7f7c12dcd400 TranslateMessage>)
+        (nil)))
+(call_insn 62 61 63 6 (set (reg:SI 0 ax)
+        (call (mem:QI (reg:DI 103) [0 TranslateMessage S1 A8])
+            (const_int 32 [0x20]))) "src/WinMain.c":45 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("TranslateMessage") [flags 0x441] <function_decl 0x7f7c12dcd400 TranslateMessage>)
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(insn 63 62 64 6 (parallel [
+            (set (reg:DI 104)
+                (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -128 [0xffffffffffffff80])))
+            (clobber (reg:CC 17 flags))
+        ]) "src/WinMain.c":46 -1
+     (nil))
+(insn 64 63 65 6 (set (reg:DI 2 cx)
+        (reg:DI 104)) "src/WinMain.c":46 -1
+     (nil))
+(insn 65 64 66 6 (set (reg:DI 105)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp_DispatchMessageA") [flags 0x2002] <var_decl 0x7f7c10bb4f30 D.91595>) [13  S8 A8])) "src/WinMain.c":46 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("DispatchMessageA") [flags 0x441] <function_decl 0x7f7c12dcd500 DispatchMessageA>)
+        (nil)))
+(call_insn 66 65 67 6 (set (reg:DI 0 ax)
+        (call (mem:QI (reg:DI 105) [0 DispatchMessageA S1 A8])
+            (const_int 32 [0x20]))) "src/WinMain.c":46 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("DispatchMessageA") [flags 0x441] <function_decl 0x7f7c12dcd500 DispatchMessageA>)
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (nil)))
+(code_label 67 66 68 7 3 (nil) [1 uses])
+(note 68 67 69 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 7 (parallel [
+            (set (reg:DI 106)
+                (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -128 [0xffffffffffffff80])))
+            (clobber (reg:CC 17 flags))
+        ]) "src/WinMain.c":43 -1
+     (nil))
+(insn 70 69 71 7 (set (reg:SI 38 r9)
+        (const_int 0 [0])) "src/WinMain.c":43 -1
+     (nil))
+(insn 71 70 72 7 (set (reg:SI 37 r8)
+        (const_int 0 [0])) "src/WinMain.c":43 -1
+     (nil))
+(insn 72 71 73 7 (set (reg:DI 1 dx)
+        (const_int 0 [0])) "src/WinMain.c":43 -1
+     (nil))
+(insn 73 72 74 7 (set (reg:DI 2 cx)
+        (reg:DI 106)) "src/WinMain.c":43 -1
+     (nil))
+(insn 74 73 75 7 (set (reg:DI 107)
+        (mem/u/c:DI (symbol_ref:DI ("*__imp_GetMessageA") [flags 0x2002] <var_decl 0x7f7c10c0d000 D.91596>) [13  S8 A8])) "src/WinMain.c":43 -1
+     (expr_list:REG_EQUAL (symbol_ref:DI ("GetMessageA") [flags 0x441] <function_decl 0x7f7c12dcd200 GetMessageA>)
+        (nil)))
+(call_insn 75 74 76 7 (set (reg:SI 0 ax)
+        (call (mem:QI (reg:DI 107) [0 GetMessageA S1 A8])
+            (const_int 32 [0x20]))) "src/WinMain.c":43 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("GetMessageA") [flags 0x441] <function_decl 0x7f7c12dcd200 GetMessageA>)
+        (nil))
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:DI (use (reg:DI 1 dx))
+            (expr_list:SI (use (reg:SI 37 r8))
+                (expr_list:SI (use (reg:SI 38 r9))
+                    (nil))))))
+(insn 76 75 78 7 (set (reg:SI 87 [ _1 ])
+        (reg:SI 0 ax)) "src/WinMain.c":43 -1
+     (nil))
+(insn 78 76 79 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 87 [ _1 ])
+            (const_int 0 [0]))) "src/WinMain.c":43 -1
+     (nil))
+(jump_insn 79 78 83 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 77)
+            (pc))) "src/WinMain.c":43 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 77)
+(note 83 79 81 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 81 83 82 8 (set (pc)
+        (label_ref 80)) -1
+     (nil)
+ -> 80)
+(barrier 82 81 84)
+(code_label 84 82 87 9 1 (nil) [1 uses])
+(note 87 84 85 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 85 87 86 9 (set (reg/i:SI 0 ax)
+        (reg:SI 89 [ <retval> ])) "src/WinMain.c":50 -1
+     (nil))
+(insn 86 85 0 9 (use (reg/i:SI 0 ax)) "src/WinMain.c":50 -1
+     (nil))

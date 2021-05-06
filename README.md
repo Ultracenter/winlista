@@ -2,13 +2,13 @@
 
 Esta app permite armazenar e recuperar informações sobre tarefas executadas ou a executar no dia pertinente.
 
-## Descricao dos arquivos
+## Descrição dos arquivos
 
-* winmain.exe: a aplicacao em modo binario
+* winmain.exe: a aplicação em modo binário
 * gerador: gerador de grafos
 * grafos: grafos gerados
-* screencasts: videos mostrando a execucao.
-* src: codigo-fonte
-* linhas.sh: conta quantas linhas de programacao a aplicaco possui.
+* screencasts: vídeos mostrando a execução.
+* src: código-fonte
+* linhas.sh: conta quantas linhas de programação a aplicação possui.
 * 20*.bin: arquivos de armazenamento.
-# winlista
+
